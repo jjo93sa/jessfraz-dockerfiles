@@ -1,5 +1,5 @@
 FROM golang:alpine as builder
-MAINTAINER Jessica Frazelle <jess@linux.com>
+LABEL maintainer="Jessica Frazelle <jess@linux.com>"
 
 ENV PATH /go/bin:/usr/local/go/bin:$PATH
 ENV GOPATH /go
@@ -14,7 +14,7 @@ RUN	apk add --no-cache \
 	yarn \
 	zip
 
-ENV VAULT_VERSION v1.0.0-rc1
+ENV VAULT_VERSION v1.1.2
 
 RUN go get github.com/hashicorp/vault
 
